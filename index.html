@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pet Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c76c5a09b4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .navbar a {
+      color: black !important;
+    }
+
+    .navbar {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px !important;
+      position: sticky;
+      z-index: 99;
+      top: 0px;
+
+    }
+
+    .navbar a:hover {
+      color: rgb(9, 171, 9) !important;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    #search {
+      background-color: #2cc92f;
+      border-radius: 0;
+    }
+
+    #search::placeholder {
+      color: white;
+    }
+
+    #search:focus {
+      color: white;
+    }
+
+    #srchicon:hover {
+      background-color: #2cc92f;
+    }
+
+    #banner {
+
+      background-image: url(image/petbg2.jpg);
+
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      background-color: black;
+    }
+
+    #banner-row {
+      height: 100vh;
+      display: flex;
+
+    }
+
+    #banner-row h1 {
+      color: white;
+      font-size: 4rem;
+
+    }
+
+    #banner-row h3 {
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    #banner-row p {
+      color: white;
+      padding-top: 5%;
+      font-size: 1.75rem;
+
+    }
+
+    @media (max-width:550px) {
+      html {
+        font-size: 15px;
+      }
+    }
+
+
+    #about-us {
+      border-left: 5px solid #2cc92f;
+      margin: 3% 0;
+      position: relative;
+      left: 2%;
+    }
+
+    #about-us h4 {
+      color: #2cc92f;
+      font-weight: bold;
+    }
+
+    #about-us h1 {
+      font-size: 3rem;
+
+    }
+
+    #p-of-about {
+      padding-bottom: 1%;
+    }
+
+    .mission {
+      background-color: #2cc92f;
+      color: white;
+      padding: 1.5%;
+      font-size: 1.5rem;
+      border-radius: 5px;
+    }
+
+    .vission {
+      color: #2cc92f;
+      padding: 1.5%;
+      font-size: 1.5rem;
+    }
+
+    .last-p-ofabout {
+      padding: 4% 0;
+      font-size: 1.5rem;
+    }
+
+    .service {
+      border-left: 5px solid #2cc92f;
+      margin: 3% 0;
+
+    }
+
+    .card-body h5 {
+      font-size: 1.75rem;
+    }
+
+    .card-body p {
+      font-size: 1.25rem;
+    }
+
+    .service-card a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #2cc92f;
+    }
+
+    .product-div {
+
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .product-item {
+      height: 100%;
+      width: 22%;
+
+      display: flex;
+      background-color: gray;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .product-item p {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      height: fit-content;
+    }
+
+    @media screen and (max-width:750px) {
+      .product-div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+
+      .product-item {
+        width: 90%;
+
+        height: fit-content;
+
+      }
+
+      .product-item p {
+        font-size: 1.4rem;
+      }
+
+      .service {
+        margin-left: 4%;
+      }
+
+    }
+
+    .discount-page {
+      height: 90vh;
+      width: 100%;
+
+
+    }
+
+    .discount-div {
+      height: 90vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url(image/dis-bg.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 5%;
+      padding: 0;
+    }
+
+    #discount-row1 {
+      border-left: 4px solid black;
+      position: relative;
+      left: 1%;
+      margin-bottom: 2%;
+    }
+
+    #discount-row1 p {
+      padding-left: 1%;
+
+    }
+
+    #discount-row1 h1 {
+      color: white;
+      font-size: 2.75rem;
+      font-weight: bold;
+      padding-left: 1%;
+
+    }
+
+    #discount-row2 p {
+      color: white;
+      font-size: 1.3rem;
+      padding-bottom: 2%;
+    }
+
+    #discount-row3 .btn1 {
+      color: black;
+      background-color: white;
+      border-radius: 0;
+      padding: 13px 38px;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+
+    #discount-row3 .btn2 {
+      color: white;
+      border: 2px solid white;
+      border-radius: 0;
+      padding: 13px 36px;
+      margin-bottom: 2%;
+    }
+
+    @media screen and (max-width:450px) {
+      html {
+        font-size: 13px;
+      }
+
+      #discount-row1 h1 {
+        font-size: 2rem;
+      }
+
+      #about-us h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    #team-page {
+     
+      margin: 5% auto;
+    }
+
+    
+
+
+    .team-col {
+     
+     border-left: 4px solid #2cc92f;
+    }
+
+    .members-row {
+      
+      
+      width: 100%;
+      margin-top: 4%;
+      display: flex;
+      justify-content: center;
+      gap: 4%;
+      flex-wrap: wrap;
+      padding: 0;
+      align-content: space-between;
+      
+    }
+
+    .members {
+      height: 300px;
+      width: 280px;
+      aspect-ratio: 1/1.1;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      gap: 5%;
+
+    }
+
+    .members>img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .members-info {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      color: #ffffff;
+      bottom: 0;
+      font-size: 1rem;
+      backdrop-filter: blur(2px);
+      transition: transform 0.25s ease;
+      /* Add transition property */
+      transform: translateY(100%);
+      /* Initial position off-screen */
+      text-align: center;
+    }
+
+    .members:hover .members-info {
+
+      transform: translateY(0);
+      /* Slide-in effect on hover */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+      background-color:rgba(0, 0, 0, 0.151) ;
+      color: white;
+      gap: 10%;
+
+    }
+    .members-info p{
+      font-size: 1.29rem;
+    }
+    @media screen and (max-width:700px) {
+        .members-row{
+          height: 1365px;
+        }
+        
+    }
+    @media screen and (max-width:450px) {
+        .members{
+          width: 230px;
+        }
+    }
+    .card-text{
+      margin-bottom: 0;
+    }
+    .blog-row{
+      margin-bottom: 4%;
+      border-left: 4px solid #2cc92f;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- navbar start -->
+
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-2 ps-lg-4" href="#"><i class="fa-solid fa-paw fa-xl pe-3"
+          style="color: #2cc92f;"></i>Happy Smile</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicediv">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About us</a>
+          </li>
+        </ul>
+        <form class="d-flex ms-auto">
+          <input class="form-control me-2 shadow-none border-0 " type="search" placeholder="Search Products"
+            aria-label="Search" id="search">
+          <button class="btn btn-outline-success rounded-0" id="srchicon" type="submit"><i
+              class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar end -->
+
+  <!-- banner start -->
+
+  <div class="container-fluid img-fluid" id="banner">
+    <div class="row align-items-center" id="banner-row">
+      <div class="col-md-6 text-center">
+        <h1>PET CARE</h1>
+        <h3>MAKE YOUR PET HAPPY!</h3>
+        <p class="mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, laudantium cum quis ipsa
+          dicta eum nihil dolore ducimus necessitatibus? Harum.</p>
+        <button class="btn " style="background-color: #2cc92f;">Read More</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- banner end -->
+
+
+  <!-- about start  -->
+  <div class="container " id="about">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-5" id="left-of-about">
+        <img src="image/aboutpet.jpeg" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6" id="right-of-about">
+        <div class="row">
+          <div class="col" id="about-us">
+            <h4>ABOUT US</h4>
+            <h1>WE KEEP YOUR PETS HAPPY ALL TIME</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col fw-bold fs-4">
+            <p id="p-of-about"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto amet unde
+              officiis accusamus atque
+              velit totam libero mollitia harum.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col bg-light">
+            <div class="container">
+              <div class="row">
+                <div class=" mission col-md-6">
+                  OUR MISSION
+                </div>
+                <div class="vission col-md-6">
+                  OUR VISSION
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mission-vission">
+                  <p class="last-p-ofabout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure dolore animi
+                    sit, consectetur
+                    exercitationem nulla At vel eligendi explicabo libero
+                    repudiandae porro ipsam est ipsa eos fugit. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about end  -->
+
+  <!-- service start  -->
+
+  <div class="container mt-4" id="servicediv">
+
+    <div class="row">
+      <div class="col service">
+        <h4>SERVICES</h4>
+        <h1>OUR EXCELENT PET</br />CARE SERVICES</h1>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between">
+      <div class="col-md-6 mt-3 ">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <img src="image/pethouse2.jpg" class="img-fluid " alt="">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body service-card">
+                <h5 class="card-title fw-semibold">PET BOARDING</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <img src="image/petfood2.jpg" class=" img-fluid pt-3 pt-lg-0 pet-food" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body service-card">
+                <h5 class="card-title fw-semibold">PET FEEDING</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between">
+      <div class="col-md-6 mt-3 ">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <img src="image/petgrooming 2.png" class="img-fluid " alt="">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body service-card">
+                <h5 class="card-title fw-semibold">PET GROOMING</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <img src="image/petfood2.jpg" class=" img-fluid pt-3 pt-lg-0 pet-food" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body service-card">
+                <h5 class="card-title fw-semibold">PET TRANNING</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- service end  -->
+
+  <!-- products start -->
+  <div class="container">
+    <div class="row">
+      <div class="col service">
+        <h4>PRODUCTS</h4>
+        <h1>PRODUCTS FOR YOUR</br />BEST FRIEND</h1>
+      </div>
+    </div>
+
+    <div class="product-div">
+      <div class="product-item bg-light">
+        <img src="image/petfood.avif" class="img-fluid" alt="">
+        <p>QUALITY PET FOOD</p>
+        <P>Rs:399/-</P>
+      </div>
+      <div class="product-item bg-light">
+        <img src="image/petfood.avif" class="img-fluid" alt="">
+        <p>QUALITY PET FOOD</p>
+        <P>Rs:399/-</P>
+      </div>
+      <div class="product-item bg-light">
+        <img src="image/petfood.avif" class="img-fluid" alt="">
+        <p>QUALITY PET FOOD</p>
+        <P>Rs:399/-</P>
+      </div>
+      <div class="product-item bg-light">
+        <img src="image/petfood.avif" class="img-fluid" alt="">
+        <p>QUALITY PET FOOD</p>
+        <P>Rs:399/-</P>
+      </div>
+
+    </div>
+  </div>
+  <!-- productend  -->
+
+  <!-- discount page start -->
+  <div class="container-fluid discount-div">
+    <div class="container">
+      <div class="row ms-2 ms-md-5" id="discount-row1">
+        <div class="col-md-10">
+          <p class="fs-4 fw-semibold">SPECIAL OFFER</p>
+          <h1>SAVE 50% ON ALL ITEMS</br>YOUR FIRST ORDER</h1>
+        </div>
+      </div>
+      <div class="row ms-2 ms-md-5" id="discount-row2">
+        <div class="col-md-6">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora est dolores explicabo animi eum dolorem
+            possimus. Iure?sapiente ipsa odit nesciunt odio facere. Necessitatibus harum ab saepe!</p>
+        </div>
+      </div>
+      <div class="row ms-2 ms-md-5" id="discount-row3">
+        <div class="col-md-6">
+          <button class="btn btn1">SHOP NOW</button>
+          <button class="btn btn2">READ MORE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- discount page end  -->
+
+  <!-- team page start  -->
+  <div class="container" id="team-page">
+    <div class="container row team-page-row">
+      <div class="col-md-8 team-col">
+        <h4>TEAM MEMBERS</h4>
+        <h1>QUALIFIED PETS CARE</br>PROFESSIONALS</h1>
+      </div>
+    </div>
+    <div class=" members-row">
+
+      <div class="members">
+        <img src="image/dr1.jpg" alt="">
+        <div class="members-info">
+          <h3 class="text-center">Dr. A K REDDY</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, harum!</p>
+        </div>
+      </div>
+      <div class="members">
+        <img src="image/dr2.jpg" alt="">
+        <div class="members-info">
+          <h3 class="text-center">Dr. A K REDDY</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, harum!</p>
+        </div>
+      </div>
+      <div class="members">
+        <img src="image/dr3.avif" alt="">
+        <div class="members-info">
+          <h3 class="text-center">Dr. A K REDDY</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, harum!</p>
+        </div>
+      </div>
+      <div class="members">
+        <img src="image/dr4.jpg" alt="">
+        <div class="members-info">
+          <h3 class="text-center">Dr. A K REDDY</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, harum!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- team end  -->
+
+  <!-- blog start  -->
+  <div class="container">
+    <div class="row blog-row">
+      <div class="col-md-5">
+        <h4>LATEST BLOG</h4>
+        <h1>LATEST ARTICLE FROM OUR BLOG POST</h1>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-between">
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="image/blog1.jpg" class="img-fluid rounded-start" style="height: 100%; object-fit: cover;" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">BLOG 1</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href=""style="text-decoration: underline;">Read more...</a>
+                <p class="card-text"><small class="text-body-secondary">15 Jun, 2023</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="image/blog2.jpg" class="img-fluid rounded-start" style="height: 100%; object-fit: cover;" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">BLOG 2</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href="" style="text-decoration: underline;">Read more...</a>
+                <p class="card-text"><small class="text-body-secondary">15 Jun, 2023</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- blog end  -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
