@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pet Care</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
   <script src="https://kit.fontawesome.com/c76c5a09b4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,13 +22,18 @@
 
     .navbar a {
       color: black !important;
+      transition: all 1s;
     }
 
     .navbar {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px !important;
-      position: sticky;
+      position: fixed;
+      width: 100%;
+
       z-index: 99;
-      top: 0px;
+      transition: all 0.4s linear;
+      /* border: 2px solid red; */
+      /* background-color: aqua; */
 
     }
 
@@ -33,6 +41,7 @@
       color: rgb(9, 171, 9) !important;
       text-decoration: underline;
       text-underline-offset: 5px;
+
     }
 
     #search {
@@ -59,6 +68,7 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
+
 
       background-color: black;
     }
@@ -282,21 +292,21 @@
     }
 
     #team-page {
-     
+
       margin: 5% auto;
     }
 
-    
+
 
 
     .team-col {
-     
-     border-left: 4px solid #2cc92f;
+
+      border-left: 4px solid #2cc92f;
     }
 
     .members-row {
-      
-      
+
+
       width: 100%;
       margin-top: 4%;
       display: flex;
@@ -305,7 +315,7 @@
       flex-wrap: wrap;
       padding: 0;
       align-content: space-between;
-      
+
     }
 
     .members {
@@ -349,31 +359,41 @@
       flex-direction: column;
       justify-content: center;
       backdrop-filter: blur(5px);
-      background-color:rgba(0, 0, 0, 0.151) ;
+      background-color: rgba(0, 0, 0, 0.151);
       color: white;
       gap: 10%;
 
     }
-    .members-info p{
+
+    .members-info p {
       font-size: 1.29rem;
     }
+
     @media screen and (max-width:700px) {
-        .members-row{
-          height: 1365px;
-        }
-        
+      .members-row {
+        height: 1365px;
+      }
+
     }
+
     @media screen and (max-width:450px) {
-        .members{
-          width: 230px;
-        }
+      .members {
+        width: 230px;
+      }
     }
-    .card-text{
+
+    .card-text {
       margin-bottom: 0;
     }
-    .blog-row{
+
+    .blog-row {
       margin-bottom: 4%;
       border-left: 4px solid #2cc92f;
+    }
+
+    .footer{
+      background-color: #2cc92f;
+      color: white;
     }
   </style>
 
@@ -689,13 +709,15 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-5">
-              <img src="image/blog1.jpg" class="img-fluid rounded-start" style="height: 100%; object-fit: cover;" alt="...">
+              <img src="image/blog1.jpg" class="img-fluid rounded-start" style="height: 100%; object-fit: cover;"
+                alt="...">
             </div>
             <div class="col-md-7">
               <div class="card-body">
                 <h5 class="card-title fw-semibold">BLOG 1</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a href=""style="text-decoration: underline;">Read more...</a>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <a href="" style="text-decoration: underline;">Read more...</a>
                 <p class="card-text"><small class="text-body-secondary">15 Jun, 2023</small></p>
               </div>
             </div>
@@ -706,12 +728,14 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-5">
-              <img src="image/blog2.jpg" class="img-fluid rounded-start" style="height: 100%; object-fit: cover;" alt="...">
+              <img src="image/blog2.jpg" class="img-fluid rounded-start" style="height: 100%; object-fit: cover;"
+                alt="...">
             </div>
             <div class="col-md-7">
               <div class="card-body">
                 <h5 class="card-title fw-semibold">BLOG 2</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
                 <a href="" style="text-decoration: underline;">Read more...</a>
                 <p class="card-text"><small class="text-body-secondary">15 Jun, 2023</small></p>
               </div>
@@ -723,10 +747,47 @@
   </div>
   <!-- blog end  -->
 
+  <!-- Footer -->
+  <div class="container footer">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-black">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-black">About</a></li>
+      </ul>
+      <p class="text-center text-black">© 2023 Company, SUBHRAJIT</p>
+    </footer>
+  </div>
 
+
+  <!-- jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <!-- lettering CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"
+    integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- textillate CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textile-js/2.1.1/textile.min.js"
+    integrity="sha512-tXqnJLtLXWw7dsznazHu0eOB2d/oQQ1b6BMvIvwI5gUG5f3e8MxaNTkCBdeQmpwlemlXwNRas39dDQi0BGd2Bg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Bootstrap Cdn -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+
+  <!-- gsap CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
